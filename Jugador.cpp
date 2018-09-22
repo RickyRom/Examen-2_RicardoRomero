@@ -4,8 +4,8 @@
 
 using namespace std;
 
-Jugador::Jugador() {
-
+Jugador::Jugador(string pnombre) {
+    nombre = pnombre;
 }
 
 Jugador::Jugador(string pnombre, string pestado, string pcontro): Item() {
@@ -45,5 +45,5 @@ void Jugador::setControlador(string contro) {
 }
 
 string Jugador::toString() {
-    return "J";
+    return nombre;
 }

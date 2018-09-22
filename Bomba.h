@@ -17,6 +17,6 @@ class Bomba: public Item {
         int getNumero();
         void setNumero(int);
 
-        string toString();
+        virtual string toString();
 };
 #endif

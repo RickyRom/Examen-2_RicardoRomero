@@ -12,6 +12,6 @@ Item::~Item() {
 }
 
 string Item::toString() {
-
+    return " ";
 }
 

@@ -12,7 +12,7 @@ class Item {
         Item();
         ~Item();
 
-        string toString();
+        virtual string toString();
 
 };
 #endif

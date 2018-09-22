@@ -2,6 +2,7 @@
 #include "Item.h"
 #include "Jugador.h"
 #include "Bomba.h"
+#include "Obstaculo.h"
 #include <vector>
 #include <string>
 using namespace std;
@@ -38,7 +39,7 @@ int main() {
 				jug = new Jugador(nombre,estado,controlador);
 				player.push_back(jug);
 
-
+				BomberMan();
 
 				break;
 			}
@@ -50,8 +51,8 @@ int main() {
 }
 
 void BomberMan() {
-	int sizeh = 11;
-	int sizev = 13;
+	int sizeh = 13;
+	int sizev = 11;
 	int x, y, x2, y2;
 	bool gameover = false;
 	int opn;	
@@ -69,7 +70,19 @@ void BomberMan() {
 			mainmatrix[i][j] = ' ';
 		}
 	}*/
+	mainmatrix[0][0] = new Jugador("J");
+	mainmatrix[0][10] = new Jugador("R");
+	mainmatrix[12][0] = new Jugador("R");
+	mainmatrix[12][10] = new Jugador("R");
+	mainmatrix[6][5] = new Jugador("R");
 
+	for(int i = 0; i < sizeh; i++) {
+		for(int j = 0; j < sizev; j++) {
+			if(i % 2 != 0 && j % 2 == 0) {
+				mainmatrix[i][j] = new Obstaculo();
+			}
+		}
+	}
 	imprimirMatriz(mainmatrix,sizeh,sizev);
 
 }

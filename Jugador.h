@@ -13,7 +13,7 @@ class Jugador: public Item{
         string controlador;
 
     public:
-        Jugador();
+        Jugador(string);
         Jugador(string,string,string);
         ~Jugador();
 
@@ -27,6 +27,7 @@ class Jugador: public Item{
         void setEstado(string);
         void setControlador(string);
 
-        string toString();
+        virtual string toString();
+
 };
 #endif
